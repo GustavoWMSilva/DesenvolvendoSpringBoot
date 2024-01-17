@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "dcdc768b-bd40-405f-9b3a-4048cdedbecc",
+		"name": "Loja_TF",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29441586",
+		"_collection_link": "https://winter-moon-822391.postman.co/workspace/My-Workspace~f3c4ef84-790c-4b7f-8ba4-edf98b09b068/collection/29441586-dcdc768b-bd40-405f-9b3a-4048cdedbecc?action=share&source=collection_link&creator=29441586"
+	},
+	"item": [
+		{
+			"name": "SolicitarOrcamento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n[\r\n    {\r\n        \"cod_produto\": 8,\r\n        \"qtd\": 99\r\n    },\r\n    {\r\n        \"cod_produto\": 9,\r\n        \"qtd\": 55\r\n    },\r\n    {\r\n        \"cod_produto\": 10,\r\n        \"qtd\": 57\r\n    }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/solicitarOrcamento/ClientePostman"
+			},
+			"response": []
+		},
+		{
+			"name": "ProdutosDisponiveis",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n[\r\n    {\r\n        \"codProduto\": 100,\r\n        \"qtd\": 12\r\n    },\r\n    {\r\n        \"codProduto\": 110,\r\n        \"qtd\": 1\r\n    },\r\n    {\r\n        \"codProduto\": 120,\r\n        \"qtd\": 2\r\n    }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/produtosDisponiveis"
+			},
+			"response": []
+		},
+		{
+			"name": "EfetivarOrcamento",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/efetivarOrcamento/1005"
+			},
+			"response": []
+		},
+		{
+			"name": "RelatorioMeses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/gerarRelatorio/meses"
+			},
+			"response": []
+		},
+		{
+			"name": "RelatorioVendidos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/gerarRelatorio/maisVendidos"
+			},
+			"response": []
+		},
+		{
+			"name": "ReleatorioReceita",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/gerarRelatorio/receita"
+			},
+			"response": []
+		}
+	]
+}
